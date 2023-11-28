@@ -1,49 +1,77 @@
-#include "lists.h"
-#include <stddef.h>
+/* Author : Adekunle Joshua Adebisi
+FIne name :
+*/
+#include <stdio.h>
 #include <stdlib.h>
+#include "lists.h"
 
 /**
- * insert_node - function that inserts a number to a singly linked list.
- * @head: pointer to pointer to head of the list.
- * @number: value of the node to insert.
- *
- * Return: the address of the new node, or NULL if it failed.
+ * print_listint - prints all elements of a listint_t list
+ * @h: pointer to head of list
+ * Return: number of nodes
  */
-
-listint_t *insert_node(listint_t **head, int number)
+size_t print_listint(const listint_t *h)
 {
-	listint_t *new_node, *traverse;
-	unsigned int idx = 0, i = 0;
-	/* if there is no list return null */
-	if (head == NULL)
-		return (NULL);
-	/* create the new node */
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
-		return (NULL);
-	/* access the n field of the new_node and initialize it as n */
-	new_node->n = number;
-	/* check if idx = 0 */
-	if (idx == 0)
+	const listint_t *current;
+	unsigned int n; /* number of nodes */
+
+	current = h;
+	n = 0;
+	while (current != NULL)
 	{
-		/* access the next field of new_node and assign it as first node */
-		new_node->next = *head;
-		*head = new_node;
-		return (new_node);
-	}
-	/* make traverse be the value at head */
-	traverse = *head;
-	while (i != idx - 1 && traverse != NULL)
-	{
-		traverse = traverse->next;
-		i++;
+		printf("%i\n", current->n);
+		current = current->next;
+		n++;
 	}
 
-	if (i == idx - 1 && traverse != NULL)
+	return (n);
+}
+
+/**
+ * add_nodeint_end - adds a new node at the end of a listint_t list
+ * @head: pointer to pointer of first node of listint_t list
+ * @n: integer to be included in new node
+ * Return: address of the new element or NULL if it fails
+ */
+listint_t *add_nodeint_end(listint_t **head, const int n)
+{
+	listint_t *new;
+	listint_t *current;
+
+	current = *head;
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = NULL;
+
+	if (*head == NULL)
+		*head = new;
+	else
 	{
-		new_node->next = traverse->next;
-		traverse->next = new_node;
-		return (new_node);
+		while (current->next != NULL)
+			current = current->next;
+		current->next = new;
 	}
-	return (NULL);
+
+	return (new);
+}
+
+/**
+ * free_listint - frees a listint_t list
+ * @head: pointer to list to be freed
+ * Return: void
+ */
+void free_listint(listint_t *head)
+{
+	listint_t *current;
+
+	while (head != NULL)
+	{
+		current = head;
+		head = head->next;
+		free(current);
+	}
 }
