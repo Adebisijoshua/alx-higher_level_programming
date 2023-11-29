@@ -1,3 +1,9 @@
+/* File name : 13_insert_numbers
+ * Author : Adekunle Joshua Adebisi
+ * Gmail :Adekunle8k@gmail.com
+*/
+
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
@@ -17,14 +23,14 @@ listint_t *insert_node(listint_t **head, int number)
 
 	new->n = number;
 
-	if (*head == NULL || (*head)->n > number)
+	if (*head == NULL || (*head)->n > number)/* If condition */
 	{
 		new->next = *head;
 		*head = new;
 		return (new);
 	}
 
-	while (actual->next)
+	while (actual->next)/* while condition */
 	{
 		if ((actual->next)->n >= number)
 		{
