@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 102-magic_calculation.py
-# Adekunle Joshua Adebisi Adekunle8k@gmail.com
+# Adekunle Joshua Adebisi`
 
 
 def magic_calculation(a, b):
