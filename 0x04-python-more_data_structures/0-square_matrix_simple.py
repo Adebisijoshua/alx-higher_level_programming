@@ -1,8 +1,16 @@
 #!/usr/bin/python3
-# 0-square_matrix_simple.py
-# Adekunle Joshua Adebisi Adekunle8k@gmail.com
-
+# File Name: 0-square_matrix_simple.py
+# Author Name: Adekunle Joshua Adebisi:  Adekunle8k@gmail.com
 
 def square_matrix_simple(matrix=[]):
-    """Compute the square value of all integers of a matrix."""
-    return ([list(map(lambda x: x * x, row)) for row in matrix])
+    """computes the square value of all integers of a matrix
+    Matrix is a 2 dimensional array
+    Returns a new matrix: Same size as matrix, Each value should be,
+    the square of the value of the input
+    Initial matrix should not be modified
+    You are not allowed to import any module
+    You are allowed to use regular loops, map, etc.
+    """
+    new_matrix = [[elem**2 for elem in inner] for inner in matrix]
+
+    return new_matrix
