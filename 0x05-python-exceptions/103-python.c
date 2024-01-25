@@ -20,7 +20,7 @@ void print_python_bytes(PyObject *p)
 	char *array_as_string = NULL;
 
 	printf("[.] bytes object info\n");
-        /* If object here */
+
 	if (!PyBytes_Check(p))
 	{
 		printf("  [ERROR] Invalid Bytes Object\n");
