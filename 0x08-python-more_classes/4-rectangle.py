@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle"""
+"""Gets the class Rectangle"""
 
 
 class Rectangle:
     """
-    Class that gives  properties of rectangle by: (based on 2-rectangle.py).
+    Class that defines properties of rectangle by: (based on 3-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
@@ -113,3 +113,11 @@ class Rectangle:
         rectangle.pop()
 
         return "".join(rectangle)
+
+    def __repr__(self):
+        """Returns a string representation of the rectangle.
+
+        Returns:
+            str: the rectangle representation.
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
