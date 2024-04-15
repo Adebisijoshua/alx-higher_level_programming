@@ -24,4 +24,4 @@ TypeError: last_name must be a string
 My name is Alex Hamilton
 
 >>> say_my_name("Alex")
-My name is Alex
+My name is Alex 
