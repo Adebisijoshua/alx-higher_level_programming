@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""This module defines a class Student"""
+"""This will defines a class Student"""
 
 
 class Student:
-    """Let it a student."""
+    """Represent a student."""
 
     def __init__(self, first_name, last_name, age):
         """Initializes a new Student
@@ -14,7 +14,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """Get a dictionary representation of the Student
-        If attrs is a list of strings, presents only those attributes
+        If attrs is a list of strings, represents only those attributes
         included in the list
         """
         if (type(attrs) == list and
