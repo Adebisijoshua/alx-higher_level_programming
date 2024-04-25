@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""
-The inherits_from function
-"""
+"""look if object is instance of a class that
+inherited from specified class"""
 
 
 def inherits_from(obj, a_class):
-    """gives yes if obj is a subclass of a_class, or else No"""
-    return(issubclass(type(obj), a_class) and type(obj) != a_class)i
+    """return True if object is an instance of a class that
+    inherited from specified class"""
+    if issubclass(obj.__class__, a_class) is True:
+        if obj.__class__ is not a_class:
+            return True
+    else:
+        return False
