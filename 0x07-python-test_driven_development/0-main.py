@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
+"""
+add_integer module
+this function adds two integers
 
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
-try:
-    print(add_integer(4, "School"))
-except Exception as e:
-    print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
+"""
+
+
+def add_integer(a, b=98):
+    """Return the integer addition of a an b
+    Raise: TypeError
+    """
+    if ((not isinstance(a, int) and not isinstance(a, float))):
+        raise TypeError("a must be an integer")
+    if ((not isinstance(b, int) and not isinstance(b, float))):
+        raise TypeError("b must be an integer")
+    return (int(a) + int(b))
