@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Gets the base geometry class BaseGeometry."""
+""" Module base geometry
+"""
+
 
 class BaseGeometry:
-    """this class is a base geometry"""
-
+    """ empty class"""
     def area(self):
-        """method not implemented yet"""
-        raise Exception("area() is not implemented")
+        raise Exception('area() is not implemented')
