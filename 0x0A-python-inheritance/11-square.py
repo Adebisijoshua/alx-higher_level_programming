@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#Author name : Adekunle Joshua Adebisi
 """11-square.py
 """
 
