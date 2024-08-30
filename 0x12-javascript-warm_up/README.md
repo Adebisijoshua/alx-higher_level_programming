@@ -38,3 +38,4 @@ General
     Your code should be semistandard compliant (version 16.x.x). Rules of Standard + semicolons on top. Also as reference: AirBnB style
     All your files must be executable
     The length of your files will be tested using wc
+
